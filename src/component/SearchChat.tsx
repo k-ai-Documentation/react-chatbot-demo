@@ -124,7 +124,7 @@ const ChatApp: React.FC = () => {
                 setMessageHistory((prev) => [...prev, { from: 'assistance', message: 'Answer:' }, { from: 'assistance', message: result.content }]);
 
                 if (result.datas.documents.length > 0) {
-                    const documentMessages = result.datas.documents.map((doc: Document) => `name: ${doc.name}<br>url: <a href="${doc.url}" target="_blank">${doc.url}</a><br><br>`).join('');
+                    const documentMessages = result.datas.documents.map((doc: Document) => `name: ${doc.name}<br>url: <a href="${doc.url}" style="color: var(--primary-color)" target="_blank">${doc.url}</a><br><br>`).join('');
                     setMessageHistory((prev) => [...prev, { from: 'assistance', message: 'Source:' }, { from: 'assistance', message: documentMessages }]);
                 }
             } else {
