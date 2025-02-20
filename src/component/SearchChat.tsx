@@ -93,7 +93,7 @@ const ChatApp: React.FC = () => {
     const conversation = async (message: string) => {
         try {
             setStep('searching');
-            return await kaiSearch.chatbot().conversation(conversationId, message, multiDocuments, 'user_id');
+            return await kaiSearch.chatbot().conversation(conversationId, message, multiDocuments, 'demo_react');
         } catch (error) {
             console.error(error);
             return null;
